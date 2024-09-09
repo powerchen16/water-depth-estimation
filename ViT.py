@@ -452,8 +452,7 @@ def vit_huge_patch14_224_in21k(num_classes: int = 21843, has_logits: bool = True
     return model
 
 
-vision_transformer = vit_base_patch16_224(num_classes=10)  # 将模型命名为vision_transformer，这里num_classes是数据集的种类，我用的猫狗数据集两类，所以等于2 你设置成你数据集的种类即可
-# 上面用的是vision_transformer，如果想用efficientnet其他系列的，直接把上面的efficientnet_b其他系列就行即可
+vision_transformer = vit_base_patch16_224(num_classes=10)  
 vision_transformer.to(device)
 
 print(vision_transformer.to(device))  # 输出模型结构
