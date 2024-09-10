@@ -240,7 +240,7 @@ def save_image(image_dicts, input_image_name, network, output_dir):
     for key, image in image_dicts.items():
         io.imsave(os.path.join(output_dir, '{}-{}-{}.jpg'.format(prefix, network, key)), image)
 
-img = io.imread(r'D:\qianmengchen\water depth prediction\dataset\test-2\level 4\41c07a7c-e29b-11ed-be35-e00af69cc788.jpg')
+img = io.imread(r'D:\water depth prediction\dataset\test-2\level 4\41c07a7c-e29b-11ed-be35-e00af69cc788.jpg')
 img = np.float32(cv2.resize(img, (224, 224))) / 255
 inputs = prepare_input(img)
 
