@@ -13,11 +13,11 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 # 1. prepare data
-root = r'D:\qianmengchen\water depth prediction\dataset\train-norepeat'
+root = r''
 train_dataset = Waterlevel(root, train=True)
 train_dataloader = DataLoader(train_dataset, batch_size=512, shuffle=True)
 
-root_val = r'D:\qianmengchen\water depth prediction\dataset\test-norepeat'
+root_val = r''
 val_dataset = Waterlevel(root_val, train=False)
 val_dataloader = DataLoader(val_dataset, batch_size=512, shuffle=True)
 
@@ -165,5 +165,4 @@ lns = line1+line2+line3+line4
 # lns = line1
 labs = [l.get_label() for l in lns]
 ax.legend(lns, labs, loc=0)
-plt.savefig(r'D:\qianmengchen\water depth prediction\Efficientnet+classification\结果分析图\efficientNet(200)(2)-512-1e-4-数增-1e-4.png')
 plt.show()
