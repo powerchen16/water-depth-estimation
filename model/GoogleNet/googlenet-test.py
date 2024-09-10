@@ -25,7 +25,7 @@ model = model.to(device)
 model.load_state_dict(torch.load(path))      # 再加载模型参数
 
 # 读取测试集中的数据
-root_test = r'D:\qianmengchen\water depth prediction\dataset\test-2'
+root_test = r'D:\water depth prediction\dataset\test-2'
 test_dataset = Waterlevel(root_test)
 test_dataloader = DataLoader(test_dataset, batch_size=200, shuffle=True)
 with torch.no_grad():
